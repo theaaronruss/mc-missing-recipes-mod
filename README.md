@@ -29,3 +29,10 @@ Required items:
 * Iron Ingot
 
 ![Crafting recipe for name tag](img/name_tag_recipe.png)
+
+### Iron Horse Armor
+
+Required items:
+* Iron Ingot (7)
+
+![Crafting recipe for iron horse armor](img/iron_horse_armor_recipe.png)
