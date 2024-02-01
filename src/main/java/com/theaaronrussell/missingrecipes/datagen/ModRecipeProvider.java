@@ -18,7 +18,7 @@ public class ModRecipeProvider extends RecipeProvider {
         buildSaddleRecipe(pRecipeOutput);
         buildNameTagRecipe(pRecipeOutput);
         buildIronHorseArmorRecipe(pRecipeOutput);
-        buildGoldHouseArmorRecipe(pRecipeOutput);
+        buildGoldenHouseArmorRecipe(pRecipeOutput);
     }
 
     private void buildSaddleRecipe(RecipeOutput pRecipeOutput) {
@@ -52,7 +52,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(pRecipeOutput);
     }
 
-    private void buildGoldHouseArmorRecipe(RecipeOutput pRecipeOutput) {
+    private void buildGoldenHouseArmorRecipe(RecipeOutput pRecipeOutput) {
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.GOLDEN_HORSE_ARMOR)
                 .pattern("g g")
                 .pattern("ggg")
