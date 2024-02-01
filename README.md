@@ -43,3 +43,10 @@ Required items:
 * Gold Ingot (7)
 
 ![Crafting recipe for golden horse armor](img/golden_horse_armor_recipe.png)
+
+### Diamond Horse Armor
+
+Required items:
+* Diamond (7)
+
+![Crafting recipe for diamond horse armor](img/diamond_horse_armor_recipe.png)
