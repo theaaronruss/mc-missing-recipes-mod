@@ -16,6 +16,7 @@ public class ModRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
         buildSaddleRecipe(pRecipeOutput);
+        buildNameTagRecipe(pRecipeOutput);
     }
 
     private void buildSaddleRecipe(RecipeOutput pRecipeOutput) {
@@ -26,6 +27,16 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('l', Items.LEATHER)
                 .define('i', Items.IRON_INGOT)
                 .unlockedBy(getHasName(Items.LEATHER), has(Items.LEATHER))
+                .save(pRecipeOutput);
+    }
+
+    private void buildNameTagRecipe(RecipeOutput pRecipeOutput) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.NAME_TAG)
+                .pattern("spi")
+                .define('s', Items.STRING)
+                .define('p', Items.PAPER)
+                .define('i', Items.IRON_INGOT)
+                .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
                 .save(pRecipeOutput);
     }
 
