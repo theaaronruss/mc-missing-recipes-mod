@@ -19,6 +19,7 @@ public class ModRecipeProvider extends RecipeProvider {
         buildNameTagRecipe(pRecipeOutput);
         buildIronHorseArmorRecipe(pRecipeOutput);
         buildGoldenHouseArmorRecipe(pRecipeOutput);
+        buildDiamondHorseArmorRecipe(pRecipeOutput);
     }
 
     private void buildSaddleRecipe(RecipeOutput pRecipeOutput) {
@@ -59,6 +60,16 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("g g")
                 .define('g', Items.GOLD_INGOT)
                 .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
+                .save(pRecipeOutput);
+    }
+
+    private void buildDiamondHorseArmorRecipe(RecipeOutput pRecipeOutput) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.DIAMOND_HORSE_ARMOR)
+                .pattern("d d")
+                .pattern("ddd")
+                .pattern("d d")
+                .define('d', Items.DIAMOND)
+                .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
                 .save(pRecipeOutput);
     }
 
