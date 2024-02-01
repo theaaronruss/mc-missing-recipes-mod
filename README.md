@@ -20,3 +20,12 @@ Required items:
 * Iron Ingot
 
 ![Crafting recipe for saddle](img/saddle_recipe.png)
+
+### Name Tag
+
+Required items:
+* String
+* Paper
+* Iron Ingot
+
+![Crafting recipe for name tag](img/name_tag_recipe.png)
