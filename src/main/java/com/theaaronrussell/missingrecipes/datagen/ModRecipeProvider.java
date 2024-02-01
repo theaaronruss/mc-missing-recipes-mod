@@ -17,6 +17,7 @@ public class ModRecipeProvider extends RecipeProvider {
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
         buildSaddleRecipe(pRecipeOutput);
         buildNameTagRecipe(pRecipeOutput);
+        buildIronHorseArmorRecipe(pRecipeOutput);
     }
 
     private void buildSaddleRecipe(RecipeOutput pRecipeOutput) {
@@ -37,6 +38,16 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('p', Items.PAPER)
                 .define('i', Items.IRON_INGOT)
                 .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
+                .save(pRecipeOutput);
+    }
+
+    private void buildIronHorseArmorRecipe(RecipeOutput pRecipeOutput) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.IRON_HORSE_ARMOR)
+                .pattern("i i")
+                .pattern("iii")
+                .pattern("i i")
+                .define('i', Items.IRON_INGOT)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(pRecipeOutput);
     }
 
